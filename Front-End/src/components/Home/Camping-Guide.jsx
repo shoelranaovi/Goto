@@ -9,6 +9,7 @@ import { Button } from "../ui/button";
 
 
 function CampingGuide() {
+  console.log("hy")
   const compinItems = [
     {
       logo: "https://togo.uxper.co/wp-content/uploads/2025/04/happy-2-1.svg",
