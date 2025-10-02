@@ -12,6 +12,8 @@ import { useState } from "react";
 
 import MobileSidebar from "./MobileSideBar";
 import { Button } from "@/components/ui/button";
+import PrimaryButton from "@/components/Lauout/Button";
+import Icon from "@/components/Lauout/Icon";
 
 const menuData = [
   {
@@ -200,7 +202,7 @@ function Navbar() {
   };
 
   return (
-    <div className="conatiner mx-auto px-4 md:px-6 lg:px-8 flex items-center justify-between  h-16 ">
+    <div className="container  mx-auto px-4 md:px-6 lg:px-8 flex items-center justify-between  h-16 ">
       <div className="flex items-center justify-center gap-2">
         {/* mobile-togle-button */}
         <div className=" lg:hidden p-1 text-bold ">
@@ -344,14 +346,17 @@ function Navbar() {
         </div>
       </div>
       <div className="flex gap-4 items-center">
-        <ShoppingCart className="hidden lg:flex" />
+        <div className="flex">
+        <Icon icon={<ShoppingCart />} />
+        <Icon icon={ <CircleUser  />} />
 
-        <CircleUser className="hidden lg:flex" />
+        </div>
+        
+       
 
-        <Button className=" hidden md:flex   rounded-2xl bg-orange-600 hover:bg-orange-500 text-white gap-2 px-4">
-          {" "}
-          <Phone size={16} /> +00 232 6777{" "}
-        </Button>
+        <div className="hidden md:flex" >
+          <PrimaryButton  icon={<Phone size={16} />} text={"+00 232 6777 "} />
+        </div>
       </div>
       {/* mobile-toggle-sidebar */}
       <MobileSidebar

@@ -1,3 +1,4 @@
+import PrimaryButton from "@/components/Lauout/Button";
 import { Button } from "@/components/ui/button";
 import {
   ChevronDown,
@@ -41,7 +42,8 @@ function MobileSidebar({
             <div className="text-orange-500 font-bold text-lg">LOGO</div>
             <Button
               onClick={toggleMobileMenu}
-              className="p-2 hover:bg-gray-100 rounded-full transition-colors"
+              
+              className="p-2 bg-white text-black hover:bg-gray-100 rounded-full transition-colors cursor-pointer"
             >
               <X size={20} />
             </Button>
@@ -52,7 +54,7 @@ function MobileSidebar({
             {menuData.map((item, index) => (
               <div key={index} className="border-b">
                 <Button
-                  className="flex items-center justify-between w-full p-4 text-left hover:bg-gray-50 transition-colors"
+                  className="bg-white text-black flex items-center justify-between w-full p-4 text-left hover:bg-gray-50 transition-colors"
                   onClick={() => toggleMenuItem(index)}
                 >
                   <span className="font-medium">{item.name}</span>
@@ -75,7 +77,7 @@ function MobileSidebar({
                       {item.countries.map((country, countryIdx) => (
                         <div key={countryIdx}>
                           <Button
-                            className="flex items-center justify-between w-full p-3 pl-8 text-left hover:bg-gray-100 transition-colors"
+                            className="flex bg-white text-black items-center justify-between w-full p-3 pl-8 text-left hover:bg-gray-100 transition-colors cursor-pointer"
                             onClick={() => toggleCountry(country.name)}
                           >
                             <span className="text-sm font-medium">
@@ -144,9 +146,13 @@ function MobileSidebar({
               <ShoppingCart size={20} className="text-gray-600" />
               <CircleUser size={20} className="text-gray-600" />
             </div>
-            <Button className="w-full rounded-2xl bg-orange-700 hover:bg-orange-600 text-white gap-2 px-4 py-2 flex items-center justify-center transition-colors">
-              <Phone size={16} /> +00 232 6777
-            </Button>
+
+            <div className="w-full flex">
+              <PrimaryButton icon={<Phone size={16} />} text={"+00 232 6777"} />
+
+            </div>
+
+          
           </div>
         </div>
       </div>

@@ -21,7 +21,7 @@ function FeatureCards() {
           }
         ];
   return (
-    <div className="flex relative  p-4 ">
+    <div className=" container mx-auto  flex relative  p-4 ">
         {/* decrative-image */}
         <div className="absolute flex flex-col items-center lg:flex-row -z-10  justify-around gap-10 w-full">
             <img className="" src="https://togo.uxper.co/wp-content/uploads/2025/04/tent-3.svg" alt="" />
@@ -38,23 +38,8 @@ function FeatureCards() {
              {/* Feature Cards Grid */}
              <div className=" pl-2 lg:pl-16 flex-1 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {features.map((feature, index) => (
-              <div 
-                key={index}
-                className="   p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-200"
-              >
-                {/* Icon placeholder - using a simple circle */}
-                <div className="w-12 h-12 bg-orange-100 rounded-full mb-4 flex items-center justify-center">
-                  <div className="w-6 h-6 bg-orange-400 rounded-full"></div>
-                </div>
-                
-                <h3 className="text-lg font-semibold text-gray-900 mb-3">
-                  {feature.title}
-                </h3>
-                
-                <p className="text-gray-600 text-sm leading-relaxed">
-                  {feature.description}
-                </p>
-              </div>
+              <ItemCard feature={feature} index={index}  />
+             
             ))}
           </div>
          
@@ -67,6 +52,30 @@ function FeatureCards() {
 }
 
 export default FeatureCards
+
+
+function ItemCard({feature, index}){
+  return(
+    <div 
+    key={index}
+    className="   p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-200"
+  >
+    {/* Icon placeholder - using a simple circle */}
+    <div className="w-12 h-12 bg-orange-100 rounded-full mb-4 flex items-center justify-center">
+      <div className="w-6 h-6 bg-orange-400 rounded-full"></div>
+    </div>
+    
+    <h3 className="Heading3">
+      {feature.title}
+    </h3>
+    
+    <p className="paragraphText ">
+      {feature.description}
+    </p>
+  </div>
+
+  )
+}
 
 
 

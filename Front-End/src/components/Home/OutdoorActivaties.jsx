@@ -1,5 +1,6 @@
 import React from 'react';
 import { Button } from '../ui/button';
+import PrimaryButton from '../Lauout/Button';
 
 const OutdoorActivities = () => {
   return (
@@ -30,7 +31,7 @@ const OutdoorActivities = () => {
           {/* Right side - Content */}
           <div className="space-y-8">
             <div>
-              <h1 className="text-4xl md:text-5xl font-bold text-gray-900 leading-tight mb-8">
+              <h1 className="Heading">
                 Exciting outdoor activities we offer
               </h1>
             </div>
@@ -47,8 +48,8 @@ const OutdoorActivities = () => {
                   </div>
                 </div>
                 <div>
-                  <h3 className="text-xl font-semibold text-gray-900 mb-2">Kayaking</h3>
-                  <p className="text-gray-600">Lorem ipsum dolor sit amet consectetur.</p>
+                  <h3 className="Heading3">Kayaking</h3>
+                  <p className="paragraphText">Lorem ipsum dolor sit amet consectetur.</p>
                 </div>
               </div>
 
@@ -62,8 +63,8 @@ const OutdoorActivities = () => {
                   </div>
                 </div>
                 <div>
-                  <h3 className="text-xl font-semibold text-gray-900 mb-2">Climbing</h3>
-                  <p className="text-gray-600">Lorem ipsum dolor sit amet consectetur.</p>
+                  <h3 className="Heading3">Climbing</h3>
+                  <p className="paragraphText">Lorem ipsum dolor sit amet consectetur.</p>
                 </div>
               </div>
 
@@ -77,8 +78,8 @@ const OutdoorActivities = () => {
                   </div>
                 </div>
                 <div>
-                  <h3 className="text-xl font-semibold text-gray-900 mb-2">Hiking</h3>
-                  <p className="text-gray-600">Lorem ipsum dolor sit amet consectetur.</p>
+                  <h3 className="Heading3">Hiking</h3>
+                  <p className="paragraphText">Lorem ipsum dolor sit amet consectetur.</p>
                 </div>
               </div>
 
@@ -92,18 +93,16 @@ const OutdoorActivities = () => {
                   </div>
                 </div>
                 <div>
-                  <h3 className="text-xl font-semibold text-gray-900 mb-2">Mountain biking</h3>
-                  <p className="text-gray-600">Lorem ipsum dolor sit amet consectetur.</p>
+                  <h3 className="Heading3">Mountain biking</h3>
+                  <p className="paragraphText">Lorem ipsum dolor sit amet consectetur.</p>
                 </div>
               </div>
             </div>
 
             {/* CTA Button */}
-            <div className="pt-4">
-              <Button className="bg-red-500 hover:bg-red-600 text-white font-semibold px-8 py-3 rounded-full transition-colors duration-300 shadow-lg hover:shadow-xl">
-                Explore Now
-              </Button>
-            </div>
+            <div className="flex justify-start">
+  <PrimaryButton text="Explore Now" />
+</div>
 
             {/* Decorative airplane */}
            
